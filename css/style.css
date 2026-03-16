@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'term';
+  src: url('3270.woff')
+}
+
+html {
+  color-scheme: dark;
+  background-color: black;
+  color: white;
+  font-family: term;
+}
+
+.redact{
+  background-color: white;
+  color: white;
+}
