@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sivu</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <h2 style="text-align: center">navigaatio</h2>
+      <a href="ansioluettelo.html"><button class="navbtn">Ansioluettelo</button></a>
+      <a href="kokemus.html"><button class="navbtn">Työkokemus</button></a>
+      <a href="keskustelu.html"><button class="navbtn">Keskustelu</button></a>
+    </nav>
+    <main>
+      <h1>Keskustelu</h1>
+      <hr>
+      <form>
+        <label for="content">Kommentin teksti:</label>
+        <br>
+        <textarea id="content" rows="8" cols="40"></textarea>
+        <br>
+        <label for="email">eMail:</label>
+        <input type="text" id="email">
+        <br>
+        <label for="bdate">Syntymäpäivä:</label>
+        <input type="date" id="bdate">
+        <br>
+        <label for="posttype">Tämä on:</label>
+        <select id="posttype">
+          <option>Kommentti</option>
+          <option>Kysymys</option>
+        </select>
+        <br>
+        <label for="consent">Antamia tietojani saa käyttää markkinoissa: </label>
+        <input type="checkbox" id="consent">
+        <br>
+        <br>
+        <button type="submit">LÄHETÄ!</button>
+      </form>
+      <hr>
+      <section>
+        <section class="msg">
+          <h3>a</h3>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

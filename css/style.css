@@ -40,4 +40,9 @@ html {
   color: white;
 }
 
-
+.msg {
+  border: 2px solid #80F;
+  border-radius: 4px;
+  margin: 8px;
+  padding: 4px;
+}
