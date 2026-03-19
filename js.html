@@ -51,7 +51,6 @@
       // let imgdata = ctx.getImageData(0,0,128,128);
       let world = new Array();
       world.length = 128;
-      setInterval(() => {
       for(let i = 0; i < 128; i++){
         world[i] = new Array()
         world[i].length = 128;
@@ -59,6 +58,7 @@
           world[i][j] = (Math.random() < 0.5);
         }
       }
+      setInterval(() => {
       // ctx.putImageData(imgdata,0,0);
       ctx.fillStyle = 'black';
       ctx.fillRect(0,0,128,128)
@@ -70,6 +70,36 @@
           }
         }
       }
+        let fraud2 = world.slice();
+        for(let i = 0; i < 128; i++){
+          for(let j = 0; j < 128; j++){
+            let neighbours = 0;
+            for(let k = -1; k < 2; k++){
+              for(let l = -1; l < 2; l++){
+                let x = i + k;
+                let y = j + l;
+                x = around(x);
+                y = around(y);
+                if (fraud2[x][y]){
+                  neighbours++
+                }
+                if (world[i][j]){
+                  neighbours -= 1;
+                }
+                if(neighbours > 3){
+                  world[i][j] = false;
+                }
+                if(neighbours < 2){
+                  world[i][j] = false;
+                }
+                if(neighbours == 3){
+                  world[i][j] = true;
+                }
+
+              }
+            }
+          }
+        }
       }, 50)
     </script>
     <script>
