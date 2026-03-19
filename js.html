@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sivu</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <h2 style="text-align: center">navigaatio</h2>
+      <a href="ansioluettelo.html"><button class="navbtn">Ansioluettelo</button></a>
+      <a href="kokemus.html"><button class="navbtn">Työkokemus</button></a>
+      <a href="keskustelu.html"><button class="navbtn">Keskustelu</button></a>
+    </nav>
+    <script>
+      const plinkables = document.getElementsByClassName('plink');
+      const title = document.getElementsByTagName('title')[0];
+      let current = false;
+      setInterval(() => {
+        for(let i = 0; i < plinkables.length; i++){
+          if(current){
+            current = false;
+            plinkables[i].style.color = 'white';
+            title.innerHTML = "hieno sivu";
+          } else {
+            plinkables[i].style.color = 'red';
+            title.innerHTML = "HIENO SIVU";
+            current = true;
+          }
+        }
+      },200);
+    </script>
+    <main>
+      <h1 style="color:white;text-shadow:0px 0px 8px red" class="plink">HIENO SIVU</h1>
+      <img src="imgs/cvkuva.jpg" alt="AAAAAAAA" height=100 id="kuva">
+      <button class="msg" onclick="let a = document.getElementById('kuva').style; a.position = 'fixed'; a.right = '0'; a.bottom = 0">DID YOU SEE IT !? !?</button>
+      <br>
+      <canvas id="stat" width=128 height=128></canvas>
+      <br>
+      <canvas id="gol" width=128 height=128></canvas>
+    </main>
+    <script>
+      let i = 0;
+      let kuva = document.getElementById('kuva');
+      setInterval(() => {i += 0.02; kuva.width = Math.tan(i) + 200;if(i>200){i=0}},5);
+    </script>
+    <script>
+      let ctx = document.getElementById('stat').getContext('2d');
+      // let imgdata = ctx.getImageData(0,0,128,128);
+      let world = new Array();
+      world.length = 128;
+      setInterval(() => {
+      for(let i = 0; i < 128; i++){
+        world[i] = new Array()
+        world[i].length = 128;
+        for(let j = 0; j < 128; j++){
+          world[i][j] = (Math.random() < 0.5);
+        }
+      }
+      // ctx.putImageData(imgdata,0,0);
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0,0,128,128)
+      ctx.fillStyle = 'purple';
+      for(let i = 0; i < 128; i++){
+        for(let j = 0; j < 128; j++){
+          if(world[i][j]){
+            ctx.fillRect(i, j, 1, 1);
+          }
+        }
+      }
+      }, 50)
+    </script>
+    <script>
+      let ctx2 = document.getElementById('gol').getContext('2d');
+      // let imgdata = ctx.getImageData(0,0,128,128);
+      let world2 = new Array();
+      world2.length = 128;
+      for(let i = 0; i < 128; i++){
+        world2[i] = new Array()
+        world2[i].length = 128;
+        for(let j = 0; j < 128; j++){
+          world2[i][j] = (Math.random() < 0.5);
+        }
+      }
+      const around = (num) => {if(num > 127){return num - 128;}if(num < 0){return num + 128;}return num;}
+      setInterval(() => {
+        let colorr = 0;
+        // ctx.putImageData(imgdata,0,0);
+        ctx2.fillStyle = 'black';
+        ctx2.fillRect(0,0,128,128)
+        ctx2.fillStyle = '#00ffff';
+        for(let i = 0; i < 128; i++){
+          for(let j = 0; j < 128; j++){
+            if(world2[i][j]){
+              ctx2.fillRect(i, j, 1, 1);
+            }
+          }
+        }
+        let fraud = world2.slice();
+        for(let i = 0; i < 128; i++){
+          for(let j = 0; j < 128; j++){
+            let neighbours = 0;
+            for(let k = -1; k < 2; k++){
+              for(let l = -1; l < 2; l++){
+                let x = i + k;
+                let y = j + l;
+                x = around(x);
+                y = around(y);
+                if (fraud[x][y]){
+                  neighbours++
+                }
+              }
+            }
+            if (world2[i][j]){
+              neighbours -= 1;
+            }
+            if(neighbours > 3){
+              world2[i][j] = false;
+            }
+            if(neighbours < 2){
+              world2[i][j] = false;
+            }
+            if(neighbours == 3){
+              world2[i][j] = true;
+            }
+
+          }
+        }
+      }, 50)
+    </script>
+  </body>
+</html>
