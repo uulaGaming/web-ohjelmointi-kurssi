@@ -17,6 +17,8 @@
     <main>
       <h1>Keskustelu</h1>
       <hr>
+      <button command="show-modal" commandfor="commentwindow">Kommentoi!</button>
+      <dialog id="commentwindow">
       <form>
         <label for="content">Kommentin teksti:</label>
         <br>
@@ -38,8 +40,10 @@
         <input type="checkbox" id="consent">
         <br>
         <br>
+        <button command="close" commandfor="commentwindow">Sulje</button>
         <button type="submit">LÄHETÄ!</button>
       </form>
+      </dialog>
       <hr>
       <section>
         <section class="msg">
