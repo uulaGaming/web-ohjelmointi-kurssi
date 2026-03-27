@@ -83,3 +83,27 @@ a:hover {
 a:visited {
   color: #888888;
 }
+
+button {
+  background-color: #008855;
+  color: white;
+}
+
+button:hover {
+  background-color: #00ff88;
+  color: black;
+}
+
+input:focus {
+  background-color: #ffffaa;
+  color: black;
+}
+
+textarea:focus {
+  background-color: #ffffaa;
+  color: black;
+}
+
+li:last-child {
+  font-style: italic;
+}
