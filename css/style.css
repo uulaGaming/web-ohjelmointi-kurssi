@@ -15,7 +15,7 @@ main {
 }
 
 nav {
-  width: 200px;
+  width: 300px;
   background-color: #111111;
   flex-shrink: 0;
   padding: 4px;
@@ -45,4 +45,29 @@ html {
   border-radius: 4px;
   margin: 8px;
   padding: 4px;
+}
+
+h1 {
+  color: #ff88ff;
+  font-size: 60px;
+}
+
+h2 {
+  color: #ff88ff;
+  font-size: 48px;
+}
+
+h3 {
+  color: #ff88ff;
+  font-size: 32px;
+}
+
+h4 {
+  color: #ff88ff;
+  font-size: 18px;
+}
+
+section {
+  border: 2px solid #00ffff;
+  background-color: #0d0d0d;
 }
