@@ -71,3 +71,15 @@ section {
   border: 2px solid #00ffff;
   background-color: #0d0d0d;
 }
+
+a {
+  color: #008855;
+}
+
+a:hover {
+  color: #00ff88;
+}
+
+a:visited {
+  color: #888888;
+}
