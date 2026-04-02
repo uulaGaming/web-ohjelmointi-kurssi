@@ -3,6 +3,11 @@
   src: url('3270.woff')
 }
 
+@font-face {
+  font-family: 'coral';
+  src: url('coral.ttf')
+}
+
 body {
   display: flex;
   padding: 0px;
@@ -50,21 +55,25 @@ html {
 h1 {
   color: #ff88ff;
   font-size: 60px;
+  font-family: coral;
 }
 
 h2 {
   color: #ff88ff;
   font-size: 48px;
+  font-family: coral;
 }
 
 h3 {
   color: #ff88ff;
   font-size: 32px;
+  font-family: coral;
 }
 
 h4 {
   color: #ff88ff;
   font-size: 18px;
+  font-family: coral;
 }
 
 section {
