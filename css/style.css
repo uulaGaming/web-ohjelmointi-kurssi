@@ -116,3 +116,7 @@ textarea:focus {
 li:last-child {
   font-style: italic;
 }
+
+.plink {
+  font-family: term;
+}
