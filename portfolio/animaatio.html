@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>portfolio</title>
+    <title>sivu</title>
     <link href="../css/style.css" rel="stylesheet">
     <link rel="icon" type="image/gif" href="../favicon.gif">
     <meta name="author" content="uula">
@@ -18,16 +18,19 @@
       <a href="../portfolio"><button class="navbtn">Portfolio</button></a>
       <a href="../js.html"><button class="navbtn">hieno js sivu</button></a>
     </nav>
+    <style>
+@keyframes spin {
+  0% {rotate: 0deg}
+  33% {rotate: 120deg}
+  66% {rotate: 240deg}
+  100% {rotate: 360deg}
+}
+    </style>
     <main>
-      <h1>Portfolio</h1>
-      <p>Tässä lista web-ohjelmointi harjoituksia!</p>
-      <nav style="border-radius: 4px; padding: 8px; background-image: url('../css/bweew.jpg'); background-size: contain">
-        <a href="keskustelu.html"><button class="navbtn">Keskustelusivu</button></a>
-        <a href="video.html"><button class="navbtn">Video sivu</button></a>
-        <a href="grid.html"><button class="navbtn">Grid sivu</button></a>
-        <a href="flex.html"><button class="navbtn">Flex sivu</button></a>
-        <a href="animaatiot.html"><button class="navbtn">Animaatio sivu</button></a>
-      </nav>
+      <h1>Animaatiot!</h1>
+      <hr>
+      <img src="../imgs/placeholder.jpg" alt="placeholder" style="animation: spin 2s linear infinite">
+
     </main>
   </body>
 </html>
