@@ -19,15 +19,19 @@ html {
   color: white;
   color-scheme: dark;
   font-family: term;
+  height: 100%;
+  margin: 0px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-  text-align: center;
+  margin: 1em auto 1em 3em;
 }
 
 nav {
   display: flex;
-  height: 32px;
   border: solid 1px #285577;
   grid-area: nav;
 }
@@ -41,17 +45,20 @@ footer {
   border: solid 1px #285577;
   grid-area: footer;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  padding-top: 3em;
 }
 
 nav a {
   display: block;
   width: 25%;
-  margin: 0px;
   border: none;
   background-color: #111111;
   color: white;
   text-align: center;
+  padding-left: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 nav a:hover {
@@ -67,23 +74,30 @@ nav a:hover {
 }
 
 .subnav a {
-  height: 32px;
+  box-sizing: border-box;
   width: 100%;
+  padding-left: 3em;
+  padding-top: 2em;
 }
 
 main {
   grid-area: main;
+  padding-top: 5em;
+  padding-left:3em;
 }
 
 body {
   display: grid;
+  min-height: 100%;
   grid-template-areas:
     'header header'
     'nav nav'
     'nav2 main'
     'footer footer';
   grid-template-columns: 300px auto;
-  grid-template-rows: 90px 34px auto 32px;
+  grid-template-rows: 8em 3em auto 7em;
+  grid-auto-rows: auto;
+  max-width: 1000px;
 }
 
     </style>
@@ -111,8 +125,8 @@ body {
     </main>
     <footer>
       <a href="https://turku.inschool.fi">Wilma</a>
-      <a href="https://tai.fi">TAI</a>
-      <a href="https//taito.edu.turku.fi/">Moodle</a>
+      <a href="https://tai.fi" style="margin-left: 2em; margin-right: 2em">TAI</a>
+      <a href="https://taito.edu.turku.fi/">Moodle</a>
     </footer>
   </body>
 </html>
