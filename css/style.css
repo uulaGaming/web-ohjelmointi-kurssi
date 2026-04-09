@@ -8,10 +8,24 @@
   src: url('coral.ttf')
 }
 
-body {
-  display: flex;
-  padding: 0px;
-  margin: 64px;
+@media screen and (min-width: 860px) {
+  body {
+    display: flex;
+    padding: 0px;
+    margin: 64px;
+  }
+  nav {
+    width: 300px;
+    flex-shrink: 0;
+    padding: 4px;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 859px) {
+  .navbtn{
+    height: 64px;
+  }
 }
 
 main {
@@ -20,19 +34,17 @@ main {
   background-color: #00000088;
 }
 
-nav {
-  width: 300px;
-  background-color: #111111ee;
-  flex-shrink: 0;
-  padding: 4px;
-  border-radius: 8px;
-}
 
 .navbtn {
   width: 100%;
   border: none;
   margin-top: 2px;
   font-family: term;
+}
+
+nav {
+  background-color: #111111ee;
+  padding: 4px;
 }
 
 html {
