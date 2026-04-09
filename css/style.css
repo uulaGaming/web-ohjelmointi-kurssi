@@ -17,13 +17,15 @@ body {
 main {
   padding: 5%;
   margin: 2px;
+  background-color: #00000088;
 }
 
 nav {
   width: 300px;
-  background-color: #111111;
+  background-color: #111111ee;
   flex-shrink: 0;
   padding: 4px;
+  border-radius: 8px;
 }
 
 .navbtn {
@@ -38,6 +40,7 @@ html {
   background-color: black;
   color: white;
   font-family: term;
+  background-image: url('bweew.gif');
 }
 
 .redact{
@@ -94,7 +97,7 @@ a:visited {
 }
 
 button {
-  background-color: #008855;
+  background-color: #008855bb;
   color: white;
 }
 
