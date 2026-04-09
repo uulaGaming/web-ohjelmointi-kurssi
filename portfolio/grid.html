@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sivu</title>
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    <meta name="author" content="uula">
+    <meta name="keywords" content="hyvä, hieno, mahtava">
+    <meta name="description" content="tää on tosi hyvä sivu">
+    <style>
+@font-face {
+  font-family: 'term';
+  src: url('../css/3270.woff')
+}
+
+html {
+  background-color: black;
+  color: white;
+  color-scheme: dark;
+  font-family: term;
+}
+
+h1 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  height: 32px;
+  border: solid 1px #285577;
+  grid-area: nav;
+}
+
+header {
+  border: solid 1px #285577;
+  grid-area: header;
+}
+
+footer {
+  border: solid 1px #285577;
+  grid-area: footer;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  display: block;
+  width: 25%;
+  margin: 0px;
+  border: none;
+  background-color: #111111;
+  color: white;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #222222;
+  color: white;
+}
+
+.subnav {
+  flex-direction: column;
+  display: block;
+  grid-area: nav2;
+  height: 100%;
+}
+
+.subnav a {
+  height: 32px;
+  width: 100%;
+}
+
+main {
+  grid-area: main;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'nav nav'
+    'nav2 main'
+    'footer footer';
+  grid-template-columns: 300px auto;
+  grid-template-rows: 90px 34px auto 32px;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio</h1>
+    </header>
+    <nav>
+      <a href="../ansioluettelo.html">Ansioluettelo</a>
+      <a href="../kokemus.html">Työkokemus</a>
+      <a href="../portfolio">Portfolio</a>
+      <a href="../js.html">hieno js sivu</a>
+    </nav>
+    <nav class="subnav">
+      <a href="keskustelu.html">Keskustelusivu</a>
+      <a href="video.html">Video sivu</a>
+      <a href="flex.html">Flex sivu</a>
+      <a href="grid.html">Grid sivu</a>
+    </nav>
+    <main>
+      <h1>Grid sivu ........</h1>
+      <hr>
+      <p>looremi ipsumi doolori sitti ametti consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </main>
+    <footer>
+      <a href="https://turku.inschool.fi">Wilma</a>
+      <a href="https://tai.fi">TAI</a>
+      <a href="https//taito.edu.turku.fi/">Moodle</a>
+    </footer>
+  </body>
+</html>
