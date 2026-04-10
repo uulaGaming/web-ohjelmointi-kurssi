@@ -20,11 +20,35 @@
     padding: 4px;
     border-radius: 8px;
   }
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 859px) {
   .navbtn{
     height: 64px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 18px;
   }
 }
 
@@ -69,25 +93,21 @@ html {
 
 h1 {
   color: #ff88ff;
-  font-size: 60px;
   font-family: coral;
 }
 
 h2 {
   color: #ff88ff;
-  font-size: 48px;
   font-family: coral;
 }
 
 h3 {
   color: #ff88ff;
-  font-size: 32px;
   font-family: coral;
 }
 
 h4 {
   color: #ff88ff;
-  font-size: 18px;
   font-family: coral;
 }
 
