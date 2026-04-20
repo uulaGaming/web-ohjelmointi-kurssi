@@ -44,7 +44,7 @@
         <input type="checkbox" id="consent">
         <br>
         <br>
-        <button type="submit">LÄHETÄ!</button>
+        <button type="submit" onclick="send(event)">LÄHETÄ!</button>
       </form>
       <button command="close" commandfor="commentwindow">Sulje</button>
       </dialog>
@@ -73,4 +73,25 @@
       </section>
     </main>
   </body>
+  <script>
+    function send(e){
+      e.preventDefault();
+
+      let birthdayField = document.getElementById('bdate');
+      let emailField = document.getElementById('email');
+      let typeField = document.getElementById('posttype');
+      let usageField = document.getElementById('consent');
+      let bodyField = document.getElementById('content');
+
+      let birthday = birthdayField.value;
+      let email = emailField.value;
+      let type = typeField.value;
+      let usage = usageField.value;
+      let body = bodyField.value;
+
+      console.log(birthday, email, type, usage, body);
+
+      document.getElementById('commentwindow').close();
+    }
+  </script>
 </html>
