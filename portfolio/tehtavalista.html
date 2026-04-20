@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tehtävälista</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    <meta name="author" content="uula">
+    <meta name="keywords" content="hyvä, hieno, mahtava">
+    <meta name="description" content="tää on tosi hyvä sivu">
+  </head>
+  <body>
+    <nav>
+      <h2 style="text-align: center">navigaatio</h2>
+      <a href="../ansioluettelo.html"><button class="navbtn">Ansioluettelo</button></a>
+      <a href="../kokemus.html"><button class="navbtn">Työkokemus</button></a>
+      <a href="../portfolio"><button class="navbtn">Portfolio</button></a>
+      <a href="../js.html"><button class="navbtn">hieno js sivu</button></a>
+    </nav>
+    <script src="tehtavalista.js" defer></script>
+    <main>
+      <h1>Tehtävälista</h1>
+      <hr>
+      <ul id="tasklist">
+      </ul>
+      <input type="text" id="textinput">
+      <button onclick="lisaa()">Lisää</button>
+    </main>
+  </body>
+</html>
