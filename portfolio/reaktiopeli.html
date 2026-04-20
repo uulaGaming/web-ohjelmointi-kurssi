@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reaktionopeus peli</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    <meta name="author" content="uula">
+    <meta name="keywords" content="hyvä, hieno, mahtava">
+    <meta name="description" content="tää on tosi hyvä sivu">
+  </head>
+  <body>
+    <nav>
+      <h2 style="text-align: center">navigaatio</h2>
+      <a href="../ansioluettelo.html"><button class="navbtn">Ansioluettelo</button></a>
+      <a href="../kokemus.html"><button class="navbtn">Työkokemus</button></a>
+      <a href="../portfolio"><button class="navbtn">Portfolio</button></a>
+      <a href="../js.html"><button class="navbtn">hieno js sivu</button></a>
+    </nav>
+    <style>
+.gamebtn{
+  background-color: white;
+  height: 128px;
+  width: 128px;
+  display: none;
+}
+    </style>
+    <main>
+      <h1>Reaktionopeus peli</h1>
+      <hr>
+      <pre id="result"></pre>
+      <button id="startbtn" onclick="start()">Aloita</button>
+      <div style="display:grid; grid-template-columns: auto auto; width: 260px; height: 260px">
+        <button class="gamebtn" id="btn1" onclick="clickk(1)">
+        </button>
+        <button class="gamebtn" id="btn2" onclick="clickk(2)">
+        </button>
+        <button class="gamebtn" id="btn3" onclick="clickk(3)">
+        </button>
+        <button class="gamebtn" id="btn4" onclick="clickk(4)">
+        </button>
+      </div>
+    </main>
+  </body>
+  <script>
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const btn4 = document.getElementById('btn4');
+const btns = [btn1, btn2, btn3, btn4];
+
+const result = document.getElementById('result');
+const startbtn = document.getElementById('startbtn');
+
+let total = 0;
+let constructorReal = 0;
+let beginTime = 0;
+let clicknum = 0;
+
+function start(){
+  total = 0;
+  constructorReal = 0;
+  clicknum = 0;
+  startbtn.style.display = 'none';
+  for (var btn of btns) {
+    btn.style.display = 'block';
+  }
+  let wait = (Math.random() * 1.5 + 0.5) * 1000;
+  setTimeout(plink, wait);
+}
+
+function plink(){
+  constructorReal = Math.floor(Math.random() * 4) + 1;
+  beginTime = Date.now();
+  btns[constructorReal - 1].style.backgroundColor = 'purple';
+}
+
+function clickk(x){
+  btns[x - 1].style.backgroundColor = 'white';
+  if (constructorReal == x){
+    constructorReal = 0;
+    total += Date.now() - beginTime;
+    clicknum++;
+    if (clicknum < 20) {
+      let wait = (Math.random() * 1.5 + 0.5) * 1000;
+      setTimeout(plink, wait);
+    } else {
+      for (var btn of btns) {
+        btn.style.display = 'none';
+      }
+      startbtn.style.display = 'block';
+      result.innerHTML = 'Reaktionopeutesi: ' + total / 20 + 'ms';
+    }
+  }
+}
+  </script>
+</html>
