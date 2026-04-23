@@ -47,6 +47,8 @@
       <canvas id="gol" width=128 height=128></canvas>
       <a href="game.html"><button class="navbtn">paina tästä pelataksesi peliä</button></a>
     </main>
+    <img width="15%" src="imgs/hevosnappi.png" alt="aktivoi hevoset" role="button" onclick="hevosfunktio()" style="position:fixed;right: 0px; top: 20%; cursor: pointer;">
+    <img src="imgs/lauma.png" role="button" onclick="hevosetpois()" alt="hevoslauma" id="hevoset" style="position: fixed; width: 100%; height: 100%; top:0px; right: -100%;">
     <script>
       let i = 0;
       let kuva = document.getElementById('kuva');
