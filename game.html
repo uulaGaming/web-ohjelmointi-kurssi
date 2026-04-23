@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gjame</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="game.js" defer></script>
+  </head>
+  <body style="flex-direction: column;justify-content: center; align-items:center;">
+    <div>
+      <a href='js.html'><button>back</button><a>
+    <button command="show-modal" commandfor="helpwindow">help</button>
+    </div>
+    <canvas style="border: solid 2px white" id="game" width="640" height="480"></canvas>
+    <dialog id="helpwindow"><p>move with arrow keys<br>press shift to go slower</p>
+    <button command="close" commandfor="helpwindow">close</button>
+    </dialog>
+  </body>
+</html>
