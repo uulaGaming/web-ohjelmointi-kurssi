@@ -41,3 +41,26 @@ function laskin_jako() {
   let toka = document.getElementById('input2').value;
   jako(eka,toka);
 }
+
+const viikonpaivat = ["sunnuntai","maanantai","tiistai","keskiviikko","torstai","perjantai","lauantai"];
+const kuukaudet = ["Tammikuu",
+    "Helmikuu",
+    "Maaliskuu",
+    "Huhtikuu",
+    "Toukokuu",
+    "Kesäkuu",
+    "Heinäkuu",
+    "Elokuu",
+    "Syyskuu",
+    "Lokakuu",
+    "Marraskuu",
+    "Joulukuu" ];
+
+function paivapainike() {
+  let paiva = new Date();
+  document.getElementById('paivamaara').innerHTML = paiva.toLocaleDateString('fi');
+  document.getElementById('aika').innerHTML = paiva.toLocaleTimeString('fi');
+  document.getElementById('paivaJaAika').innerHTML = paiva.toLocaleString('fi');
+  document.getElementById('viikonpaiva').innerHTML = viikonpaivat[paiva.getDay()];
+  document.getElementById('kuukausi').innerHTML = kuukaudet[paiva.getMonth()];
+}
