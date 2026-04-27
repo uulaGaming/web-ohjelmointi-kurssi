@@ -1,5 +1,6 @@
 const tasklist = document.getElementById("tasklist");
 const textinput = document.getElementById("textinput");
+const numberinput = document.getElementById("numberinput");
 
 let lista = ["Tehtävä 1", "Tehtävä 2"];
 
@@ -15,7 +16,9 @@ function paivitaLista(){
 paivitaLista();
 
 function lisaa() {
-  lista.push(textinput.value);
+  for (var i = 0 ; i < numberinput.value ; i++){
+    lista.push(textinput.value);
+  }
   textinput.value = '';
   paivitaLista();
 }
