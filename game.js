@@ -27,8 +27,8 @@ class bullet {
     this.x = x;
     this.y = y;
     this.rad = rad;
-    this.direction = (Math.random() * 360);
-    this.speed = Math.random() * 0.05 + 0.05;
+    this.direction = (Math.random() * 0.25 - 0.125);
+    this.speed = Math.random() * 0.1 + 0.1;
   }
   draw(){
     ctx.fillCircle(this.x, this.y, this.rad);
@@ -83,6 +83,18 @@ document.addEventListener('keydown', (ev) => {
     case 'arrowdown':
       keys.down = 1;
       break;
+    case 'l':
+      keys.right = 1;
+      break;
+    case 'h':
+      keys.left = 1;
+      break;
+    case 'k':
+      keys.up = 1;
+      break;
+    case 'j':
+      keys.down = 1;
+      break;
     case 'shift':
       speed = 0.1;
       break;
@@ -103,6 +115,18 @@ document.addEventListener('keyup', (ev) => {
     case 'arrowdown':
       keys.down = 0;
       break;
+    case 'l':
+      keys.right = 0;
+      break;
+    case 'h':
+      keys.left = 0;
+      break;
+    case 'k':
+      keys.up = 0;
+      break;
+    case 'j':
+      keys.down = 0;
+      break;
     case 'shift':
       speed = 0.2;
       break;
@@ -111,13 +135,13 @@ document.addEventListener('keyup', (ev) => {
 
 function resetGame() {
   bullets = [];
-  playerx = gamew / 4;
+  playerx = gamew / 2;
   playery = gameh / 2;
 
   score = 0;
 
   for (let i = 0; i < 128; i++) {
-    bullets.push(new bullet(gamew / 2, gameh / 2, Math.random() * 8 + 8));
+    bullets.push(new bullet(Math.random() * gamew, gameh / 1.5, Math.random() * 4 + 4));
   }
 }
 
