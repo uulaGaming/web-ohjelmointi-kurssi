@@ -42,7 +42,7 @@ function laskin_jako() {
   jako(eka,toka);
 }
 
-const viikonpaivat = ["sunnuntai","maanantai","tiistai","keskiviikko","torstai","perjantai","lauantai"];
+const viikonpaivat = [,"sunnuntai","maanantai","tiistai","keskiviikko","torstai","perjantai","lauantai"];
 const kuukaudet = ["Tammikuu",
     "Helmikuu",
     "Maaliskuu",
@@ -63,4 +63,40 @@ function paivapainike() {
   document.getElementById('paivaJaAika').innerHTML = paiva.toLocaleString('fi');
   document.getElementById('viikonpaiva').innerHTML = viikonpaivat[paiva.getDay()];
   document.getElementById('kuukausi').innerHTML = kuukaudet[paiva.getMonth()];
+}
+
+let veijo = new Set(["luku","poisto"]);
+let elvira = new Set(["luku","kirjoitus","muokkaus"]);
+let mehdi = new Set(["luku","muokkaus","poisto"]);
+let tuuli = new Set(["kirjoitus","poisto"]);
+
+for (const permission of veijo) {
+  let li = document.createElement('li');
+  li.innerHTML = permission;
+  document.getElementById('veijo').append(li);
+}
+for (const permission of elvira) {
+  let li = document.createElement('li');
+  li.innerHTML = permission;
+  document.getElementById('elvira').append(li);
+}
+for (const permission of mehdi) {
+  let li = document.createElement('li');
+  li.innerHTML = permission;
+  document.getElementById('mehdi').append(li);
+}
+for (const permission of tuuli) {
+  let li = document.createElement('li');
+  li.innerHTML = permission;
+  document.getElementById('tuuli').append(li);
+}
+
+for (const permission of veijo.union(tuuli)){
+  document.getElementById('veijotuuli').innerHTML = permission;
+}
+for (const permission of mehdi.intersection(elvira)) {
+  document.getElementById('mehdielvira').innerHTML = permission;
+}
+for (const permission of elvira.symmetricDifference(tuuli)) {
+  document.getElementById('elviratuuli').innerHTML = permission;
 }
