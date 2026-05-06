@@ -42,6 +42,39 @@ function laskin_jako() {
   jako(eka,toka);
 }
 
+function abs(){
+  let eka = document.getElementById('input1').value;
+  alert(Math.abs(eka));
+}
+
+function sqrt(){
+  let eka = document.getElementById('input1').value;
+  alert(Math.sqrt(eka));
+}
+
+function  pow(){
+  let eka = document.getElementById('input1').value;
+  let toka = document.getElementById('input2').value;
+  alert(Math.pow(eka, toka));
+}
+
+function max(){
+  let eka = document.getElementById('input1').value;
+  let toka = document.getElementById('input2').value;
+  alert(Math.max(eka, toka));
+}
+
+function min(){
+  let eka = document.getElementById('input1').value;
+  let toka = document.getElementById('input2').value;
+  alert(Math.min(eka, toka));
+}
+
+function round(){
+  let eka = document.getElementById('input1').value;
+  alert(Math.round(eka));
+}
+
 const viikonpaivat = [,"sunnuntai","maanantai","tiistai","keskiviikko","torstai","perjantai","lauantai"];
 const kuukaudet = ["Tammikuu",
     "Helmikuu",
