@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merkkijonosivu</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    <meta name="author" content="uula">
+    <meta name="keywords" content="hyvä, hieno, mahtava">
+    <meta name="description" content="tää on tosi hyvä sivu">
+  </head>
+  <body>
+    <nav>
+      <h2 style="text-align: center">navigaatio</h2>
+      <a href="../ansioluettelo.html"><button class="navbtn">Ansioluettelo</button></a>
+      <a href="../kokemus.html"><button class="navbtn">Työkokemus</button></a>
+      <a href="../portfolio"><button class="navbtn">Portfolio</button></a>
+      <a href="../js.html"><button class="navbtn">hieno js sivu</button></a>
+    </nav>
+    <script src="merkkijonot.js" defer></script>
+    <main>
+      <h1>Merkkijonosivu</h1>
+      <hr>
+      <h2>Poimi kirjain</h2>
+      <input type="text" id="poimiin1">
+      <input type="number" id="poimiin2">
+      <button onclick="poimi()">Näytä</button>
+      <div id="poimiout"></div>
+      <hr>
+      <h2>löyda indeksi</h2>
+      <input type="text" id="loydain1">
+      <input type="text" id="loydain2">
+      <button onclick="loyda()">Näytä</button>
+      <div id="loydaout"></div>
+      <hr>
+      <h2>leikkaa merkkijono</h2>
+      <input type="text" id="leikkaain1">
+      <input type="number" id="leikkaain2">
+      <input type="number" id="leikkaain3">
+      <button onclick="leikkaa()">Näytä</button>
+      <div id="leikkaaout"></div>
+      <hr>
+      <h2>etsi ja korvaa</h2>
+      <input type="text" id="korvaain1">
+      <input type="text" id="korvaain2">
+      <input type="text" id="korvaain3">
+      <button onclick="korvaa()">Näytä</button>
+      <div id="korvaaout"></div>
+      <hr>
+      <h2>poikki ja pinoon</h2>
+      <input type="text" id="pinoonin1">
+      <input type="text" id="pinoonin2">
+      <button onclick="pinoon()">Näytä</button>
+      <ul id="pinoonout"></ul>
+    </main>
+  </body>
+</html>
