@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taulukot</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    <meta name="author" content="uula">
+    <meta name="keywords" content="hyvä, hieno, mahtava">
+    <meta name="description" content="tää on tosi hyvä sivu">
+  </head>
+  <body>
+    <nav>
+      <h2 style="text-align: center">navigaatio</h2>
+      <a href="../ansioluettelo.html"><button class="navbtn">Ansioluettelo</button></a>
+      <a href="../kokemus.html"><button class="navbtn">Työkokemus</button></a>
+      <a href="../portfolio"><button class="navbtn">Portfolio</button></a>
+      <a href="../js.html"><button class="navbtn">hieno js sivu</button></a>
+    </nav>
+    <script src="taulukot.js" defer></script>
+    <main>
+      <h1>Taulukot</h1>
+      <hr>
+      <section>
+        <h2>poimi elementti</h2>
+        <input type="number" id="poimi1">
+        <button onclick="poimi()">näytä</button>
+        <pre id="poimiout"></pre>
+      </section>
+      <section>
+        <h2>löydä indeksi</h2>
+        <input type="text" id="indeksi1">
+        <button onclick="indeksi()">näytä</button>
+        <pre id="indeksiout"></pre>
+      </section>
+      <section>
+        <h2>leikkaa taulukko</h2>
+        <input type="number" id="leikkaa1">
+        <input type="number" id="leikkaa2">
+        <button onclick="leikkaa()">näytä</button>
+        <ul id="leikkaaout"></ul>
+      </section>
+      <section>
+        <h2>järjestä</h2>
+        <button onclick="jtt()">Tulosta tekstit</button>
+        <button onclick="jtj()">Järjestä tekstit</button>
+        <button onclick="jtk()">Käännä tekstien järjestys</button>
+        <button onclick="jnt()">Tulosta numerot</button>
+        <button onclick="jnj()">Järjestä numerot</button>
+        <button onclick="jnk()">Käännä numeroiden järjestys</button>
+        <ul id="jarjestaout"></ul>
+      </section>
+      <section>
+        <h2>suodata</h2>
+        <input type="number" id="suodata1">
+        <button onclick="st()">Tulosta numerot</button>
+        <button onclick="sp()">Valitse pienimmät</button>
+        <button onclick="si()">Valitse suurimmat</button>
+        <ul id="suodataout"></ul>
+      </section>
+    </main>
+  </body>
+</html>
